@@ -1,0 +1,1 @@
+/workspaces/smart-contracts-rust/projecte/xun-go/target/wasm32-unknown-unknown/release/xun_go_wasm.wasm: /workspaces/smart-contracts-rust/projecte/xun-go/src/xun_go.rs /workspaces/smart-contracts-rust/projecte/xun-go/wasm/src/lib.rs

@@ -1,0 +1,1 @@
+/workspaces/smart-contracts-rust/projecte/xun-go/target/debug/xun-go-meta: /workspaces/smart-contracts-rust/projecte/xun-go/meta/src/main.rs /workspaces/smart-contracts-rust/projecte/xun-go/src/xun_go.rs

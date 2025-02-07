@@ -1,0 +1,23 @@
+[
+  "checkNoPayment",
+  "getArgumentLength",
+  "getBlockTimestamp",
+  "getNumArguments",
+  "mBufferAppend",
+  "mBufferAppendBytes",
+  "mBufferCopyByteSlice",
+  "mBufferEq",
+  "mBufferFinish",
+  "mBufferGetArgument",
+  "mBufferGetByteSlice",
+  "mBufferGetLength",
+  "mBufferNew",
+  "mBufferSetBytes",
+  "mBufferStorageLoad",
+  "mBufferStorageStore",
+  "managedCaller",
+  "managedSignalError",
+  "signalError",
+  "smallIntFinishUnsigned",
+  "smallIntGetUnsignedArgument"
+]

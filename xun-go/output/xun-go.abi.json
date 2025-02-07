@@ -1,0 +1,201 @@
+{
+    "buildInfo": {
+        "rustc": {
+            "version": "1.82.0",
+            "commitHash": "f6e511eec7342f59a25f7c0534f1dbea00d01b14",
+            "commitDate": "2024-10-15",
+            "channel": "Stable",
+            "short": "rustc 1.82.0 (f6e511eec 2024-10-15)"
+        },
+        "contractCrate": {
+            "name": "xun-go",
+            "version": "0.0.0"
+        },
+        "framework": {
+            "name": "multiversx-sc",
+            "version": "0.54.6"
+        }
+    },
+    "name": "XunGo",
+    "constructor": {
+        "inputs": [],
+        "outputs": []
+    },
+    "endpoints": [
+        {
+            "name": "certifySkill",
+            "mutability": "mutable",
+            "inputs": [
+                {
+                    "name": "user",
+                    "type": "Address"
+                },
+                {
+                    "name": "skill_name",
+                    "type": "SkillName"
+                },
+                {
+                    "name": "level",
+                    "type": "SkillLevel"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "getUserSkills",
+            "mutability": "readonly",
+            "inputs": [
+                {
+                    "name": "user",
+                    "type": "Address"
+                }
+            ],
+            "outputs": [
+                {
+                    "type": "variadic<Certificate>",
+                    "multi_result": true
+                }
+            ]
+        },
+        {
+            "name": "revokeCertificate",
+            "mutability": "mutable",
+            "inputs": [
+                {
+                    "name": "cert_id",
+                    "type": "u64"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "getCertificates",
+            "mutability": "readonly",
+            "inputs": [
+                {
+                    "name": "id",
+                    "type": "u64"
+                }
+            ],
+            "outputs": [
+                {
+                    "type": "Certificate"
+                }
+            ]
+        },
+        {
+            "name": "userCertificates",
+            "mutability": "readonly",
+            "inputs": [
+                {
+                    "name": "user",
+                    "type": "Address"
+                }
+            ],
+            "outputs": [
+                {
+                    "type": "variadic<u64>",
+                    "multi_result": true
+                }
+            ]
+        },
+        {
+            "name": "certificateCounter",
+            "mutability": "readonly",
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "u64"
+                }
+            ]
+        }
+    ],
+    "esdtAttributes": [],
+    "hasCallback": false,
+    "types": {
+        "Certificate": {
+            "type": "struct",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "u64"
+                },
+                {
+                    "name": "user",
+                    "type": "Address"
+                },
+                {
+                    "name": "issuer",
+                    "type": "Address"
+                },
+                {
+                    "name": "skill",
+                    "type": "Skill"
+                },
+                {
+                    "name": "issued_on",
+                    "type": "u64"
+                },
+                {
+                    "name": "valid",
+                    "type": "bool"
+                }
+            ]
+        },
+        "Skill": {
+            "type": "struct",
+            "fields": [
+                {
+                    "name": "name",
+                    "type": "SkillName"
+                },
+                {
+                    "name": "level",
+                    "type": "SkillLevel"
+                }
+            ]
+        },
+        "SkillLevel": {
+            "type": "enum",
+            "variants": [
+                {
+                    "name": "Basic",
+                    "discriminant": 0
+                },
+                {
+                    "name": "Intermediate",
+                    "discriminant": 1
+                },
+                {
+                    "name": "Advanced",
+                    "discriminant": 2
+                }
+            ]
+        },
+        "SkillName": {
+            "type": "enum",
+            "variants": [
+                {
+                    "name": "Skill1",
+                    "discriminant": 0
+                },
+                {
+                    "name": "Skill2",
+                    "discriminant": 1
+                },
+                {
+                    "name": "Skill3",
+                    "discriminant": 2
+                },
+                {
+                    "name": "Skill4",
+                    "discriminant": 3
+                },
+                {
+                    "name": "Skill5",
+                    "discriminant": 4
+                }
+            ]
+        }
+    }
+}

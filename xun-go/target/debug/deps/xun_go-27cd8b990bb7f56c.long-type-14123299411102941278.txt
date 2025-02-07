@@ -1,0 +1,1 @@
+multiversx_sc::types::ManagedVec<<Self as multiversx_sc::contract_base::ContractBase>::Api, Certificate<<Self as multiversx_sc::contract_base::ContractBase>::Api>>
